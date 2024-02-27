@@ -1,0 +1,235 @@
+.form-container {
+    background: linear-gradient(0deg, rgba(138, 148, 171, 0.5), rgba(138, 148, 171, 0.5)),url("../assets/banner.png"); /* Установить фоновую картинку для блока АВТОРИЗАЦИИ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 80px auto;
+    padding: 2% 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+
+    overflow: hidden;
+    border: 1px solid var(--bg-color);
+    border-radius: 10px;
+    z-index: 0;
+}
+.form-bg-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    color: var(--bg-color);
+    z-index: 2;
+}
+.form-bg-text {
+    padding: 0 6%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    color: var(--light-color);
+}
+.form-bg-text h3 p {
+    font-weight: normal;
+    font-size: 16px;
+    color: var(--light-color);
+}
+.form-bg-text button {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    background-color: transparent;
+    color: var(--bg-color);
+
+    border-radius: 30px;
+    border: 2px solid var(--light-color);
+    cursor: pointer;
+    transition: .2s linear;
+}
+.form-bg-text button:hover {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+}
+.form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 200%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+    z-index: 1;
+}
+.form-overlay-page {
+    width: 25%;
+    height: 100%;
+    background-color: var(--bg-color);
+}
+.form-overlay-page._transparent {
+    background-color: transparent;
+}
+.form-container._switched .form-overlay {
+    transform: translateX(-25%);
+}
+@keyframes show {
+    0%{
+        opacity: 0;
+        z-index: -1;
+    }
+    50%{
+        opacity: 0;
+        z-index: -1;
+    }
+    100% {
+        opacity: 1;
+        z-index: 3;
+    }
+}
+@keyframes hide {
+    0%{
+        opacity: 1;
+        z-index: 3;
+    }
+    50%{
+        opacity: 1;
+        z-index: 3;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+form {
+    padding: 0 6%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    transition: 0.6s ease-in-out;
+}
+form._login {
+    z-index: 3;
+    transform: translateX(0);   
+}
+form._reg {
+    z-index: 3;
+    transform: translateX(100%);   
+}
+.form-container._switched form._login {
+    transform: translateX(-100%);    
+}
+.form-container._switched form._reg {
+    transform: translateX(0);   
+}
+
+form h2 {
+    font-size: 22px;
+    font-weight: 600;
+
+}
+.input-field {
+    position: relative;
+    margin: 10px 0;
+    width: 100%;
+    height: 45px;
+
+}
+.input-field input {
+    padding: 0 12%;
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 30px;
+    font-size: 15px;
+    outline: none;
+
+    cursor: default;
+
+}
+.input-field input._error {
+    color: #f00;
+
+    border: solid 1px #f00;
+}
+#error-message {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #f00;
+}   
+.input-field i {
+    position: absolute;
+    width: 12%;
+    height: 100%;
+    display: flex;
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+.input-field button {
+    padding: 0;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    background: var(--main-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: .3s ;
+}
+.input-field button:hover{
+    background: var(--dark-color);
+    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.2);
+}
+.form-bottom {
+    display: none;
+    width: 100%;
+    font-size: small;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.form-bottom a:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+
+@media (max-width: 750px){
+    .form-container {background: var(--bg-color); flex-direction: column;}
+    .form-bg-content, 
+    .form-overlay {display: none;}
+    .form-bottom {display: flex; justify-content: flex-end;}
+    form._login {
+        display: flex;
+        width: 100%;
+        opacity: 1;
+        z-index: 3;
+    }
+    form._reg {display: none;}
+    .form-container._switched form._login {display: none;}
+    .form-container._switched form._reg {
+        display: flex;
+        width: 100%;
+        opacity: 1;
+        z-index: 3; 
+    }
+}

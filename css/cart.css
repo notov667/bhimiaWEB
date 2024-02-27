@@ -1,0 +1,237 @@
+.user-wrapper {
+	position: relative;
+    padding: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+.user-backbtn {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-size: 25px;
+	color: var(--main-color);
+	cursor: pointer;
+}
+.user-data {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 300px;
+}
+.user-img {
+    position: relative;
+    width: 100px;
+
+    border-radius: 100%;
+}
+.user-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    border: 5px solid var(--main-color);
+    z-index: 1;
+}
+.user-img label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+}
+.user-img input {
+    display: none;
+    width: 100%;
+}
+.user-data text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.user-data text p {
+    display: flex;
+    gap: 10px;
+}
+.user-data text p b {
+    font-size: 16px;
+}
+.user-data button {
+    padding: 10px 40px;
+    color: var(--light-color);
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.user-pass {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 300px;
+}
+.user-pass h3 {
+    text-align: center;
+}
+.user-pass form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.input-field {
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+    background-color: transparent;
+}
+
+.input-field input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    color: var(--text-color);
+    font-size: 15px;
+    padding: 0 0 0 45px;
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    border-radius: 30px;
+    outline: none;
+}
+.input-field input:focus {
+    outline: none;
+}
+.input-field input._error {
+    border: solid 1px #f00;
+    color: #f00;
+}
+#error-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: #f00;
+}   
+.input-field i {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    display: flex;
+    height: 100%;
+    color: var(--text-color);
+    align-items: center;
+}
+::-webkit-input-placeholder{
+    color: var(--text-color);
+}
+.input-field input[type="submit"] {
+    padding: 0;
+    width: 100%;
+    height: 45px;
+    font-size: 15px;
+    color: var(--white-color);
+    background: var(--main-color);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+
+.cart-wrapper {
+    margin: 0 0 80px;
+}
+.cart-wrapper h2 {
+    text-transform: uppercase;
+}
+
+.cart-price {
+    display: flex;
+    justify-content: space-between;
+}
+.cart-price button {
+    padding: 10px 40px;
+    color: var(--light-color);
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.products-content._cart {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: auto;
+    align-items: center;
+    gap: 30px;
+}
+.products-content._cart .price {
+    display: flex;
+    align-items: center;
+    min-width: fit-content;
+    gap: 30px;
+}
+.products-content._cart .price button {
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    color: var(--light-color);
+    background-color: var(--main-color);
+    font-size: 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.product-count {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+.product-count span {
+    position: unset;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 0;
+    opacity: 1;
+}
+.product-count span::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.product-count span:first-child:before {
+    content: '-';
+}
+.product-count span:last-child:before {
+    content: '+';
+}
+.product-count a {
+    font-weight: 500;
+}
+@media (max-width: 600px) {
+        
+    .products-content._cart {
+        flex-direction: column;
+    }
+}

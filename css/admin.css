@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html {
+    background: #fff;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 30px;
+}
+.form-wrapper {
+	padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    
+    border: dashed 2px #000;
+}
+.form-wrapper:first-child {
+	background-color: rgba(0, 255, 0, 0.2);
+}
+.form-wrapper:last-child {
+	background-color: rgba(0, 0, 255, 0.2);
+}
+.form-wrapper form {
+    margin: 20px 0 0 20px;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.form-wrapper form label {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+.form-wrapper form input {
+    width: 100%;
+}
+.form-wrapper form input:focus {
+    outline: none;
+}
+.form-wrapper form select:focus {
+    outline: none;
+}
+.radio_label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.radio_label input {
+    width: 10px;
+    margin: 0 15px 0 0;
+}
+
+.product-wrapper input {
+    background-color: var(--other-color);
+}
+
+.product-wrapper button {
+    padding: 10px 40px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-color);
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.product-wrapper textarea {
+    width: 300px;
+    resize: vertical;
+}

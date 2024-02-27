@@ -1,0 +1,134 @@
+
+.blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+.banner-container {
+    position: relative;
+    width: 100%;
+}
+.banner-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+}
+.banner-container .blur {
+    background: linear-gradient(90deg, #8A94AB 0%, rgba(138, 148, 171, 0) 100%);
+}
+.banner-wrapper {
+    position: relative;
+    padding: 90px 0;
+    width: 100%;
+}
+.banner-content {
+    width: 100%;
+    color: var(--light-color);
+}
+.banner-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.banner-text h3 {
+    text-transform: uppercase;
+}
+.banner-text button {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    color: var(--light-color);
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.banner-text p {
+    display: flex;
+}
+.banner-text a {
+    margin-right: 20px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    color: var(--light-color);
+    font-size: 13px;
+}
+.banner-text span::before {
+    content: '+';
+    margin-right: 10px;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    color: var(--light-color);
+    border-radius: 100%;
+}
+
+.map-wrapper {
+    position: relative;
+    margin: 120px auto 80px;
+    width: 100%;
+    
+}
+.map-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+}
+.map-wrapper .blur {
+    background-color: rgba(249,250,251,.5);
+}
+.map-content {
+    padding: 40px 40px 150px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+}
+.map-content span {
+    opacity: 0.7;
+}
+.map-content p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.map-content p i {
+    font-size: 18px;
+}
+.map-content p a {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+@media (max-width: 778px) {
+    
+    .banner-container {
+        display: none;
+    }
+}
+@media (max-width: 540px) {
+    
+    .map-wrapper {
+        display: none;
+    }
+}
